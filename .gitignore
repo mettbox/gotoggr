@@ -1,0 +1,21 @@
+# Compiled binaries
+/gotoggr
+/go-toggr
+*.exe
+
+# Test & coverage output
+*.test
+*.out
+coverage.html
+
+# Go workspace files
+go.work
+go.work.sum
+
+# macOS
+.DS_Store
+
+# Editor/IDE
+.idea/
+.vscode/
+*.swp

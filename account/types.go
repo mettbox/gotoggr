@@ -46,6 +46,13 @@ type TimeEntry struct {
 	DurOnly     bool       `json:"duronly"`
 }
 
+// DayReport holds one day's entries, merged per project and ordered longest first.
+type DayReport struct {
+	Date    string
+	Entries []DetailedEntry
+	Total   int64
+}
+
 type DetailedEntry struct {
 	Workspace   string
 	Pid         int

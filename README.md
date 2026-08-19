@@ -2,12 +2,37 @@
 
 > Report your daily toggl tracked tasks
 
-## Usage
+## Requirements
 
-Setup Toggl API Token
+A Toggl API key is required. Generate one in your Toggl profile at
+<https://track.toggl.com/profile> and store it with `gotoggr --set-token <your-token>`.
+
+## Install
 
 ```sh
-gotoggr --token <your-token>
+go install .
+```
+
+This builds the binary and puts it in `$(go env GOPATH)/bin`.
+
+To run it from anywhere, add that directory to your `PATH` — in `~/.zshrc` (zsh, the macOS default):
+
+```sh
+export PATH=$PATH:$(go env GOPATH)/bin
+```
+
+## Usage
+
+Set the Toggl API key
+
+```sh
+gotoggr --set-token <your-token>
+```
+
+Show the stored API key
+
+```sh
+gotoggr --show-token
 ```
 
 Get latest time entries
@@ -16,18 +41,10 @@ Get latest time entries
 gotoggr
 ```
 
-## Build and Install
+## Development
 
-Build the Go app:
-
-```sh
-go build -o gotoggr
-```
-
-Make it available in your bash:
+Run without installing:
 
 ```sh
-# Add GOPATH/bin directory to your PATH environment variable so you can run Go programs anywhere.
-export GOPATH=$HOME/go
-export PATH=$PATH:$(go env GOPATH)/bin
+go run .
 ```

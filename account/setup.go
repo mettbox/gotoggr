@@ -24,7 +24,7 @@ func GetToken() string {
 	}
 
 	if !fileExists {
-		fmt.Println("Error: Setup file does not exists. Please run gotoggr --token <your-toggle-api-token>")
+		fmt.Println("Error: Setup file does not exists. Please run gotoggr --set-token <your-toggle-api-token>")
 		os.Exit(0)
 	}
 
